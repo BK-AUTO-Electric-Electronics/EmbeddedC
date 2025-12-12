@@ -1,6 +1,7 @@
 # Homework stdarg and assert
 
-- _FILE STRUCTURE_
+- `_FILE STRUCTURE_`
+```
 
 project/
 ├── src/
@@ -11,7 +12,9 @@ project/
 │   ├── error_handler.h
 │   ├── math_utils.h
 |   Makefile
-- _Task requirements_
+
+```
+- `_Task requirements_`
 
 1. trong file error_handler chứa hàm xử lý lỗi bằng assert khi mẫu bằng 0
 
