@@ -1,11 +1,11 @@
 # [STDARG.H]()
 --- 
-### - Header file có tên stdarg.h trong Thư viện C định nghĩa một kiểu biến `va_list` và 3 **macro** mà có thể được sử dụng để lấy các tham số trong một hàm khi số tham số là chưa được biết (ví dụ như số tham số là có thể biến đổi).  
+- Header file có tên stdarg.h trong Thư viện C định nghĩa một kiểu biến `va_list` và 3 **macro** mà có thể được sử dụng để lấy các tham số trong một hàm khi số tham số là chưa được biết (ví dụ như số tham số là có thể biến đổi).  
 
 
 ## Biến được định nghĩa trong ***stdarg.h***
 
-### `va_list`: Đây là một kiểu phù hợp để lưu trữ thông tin cần thiết bởi ba macro là `va_start()`, `va_arg()` và `va_end()`.
+ `va_list`: Đây là một kiểu phù hợp để lưu trữ thông tin cần thiết bởi ba macro là `va_start()`, `va_arg()` và `va_end()`.
 
 
 ## Các macro được định nghĩa trong ***stdarg.h***
@@ -43,7 +43,7 @@ int main() {
 }
 ```
 
-### Kết quả sẽ là:
+Kết quả sẽ là:
 ```c
 6
 26
@@ -59,13 +59,13 @@ int main() {
 
 ## ***1. ASSERT()***
 
-### - `ASSERT` là các câu lệnh được sử dụng để kiểm tra các giả định do lập trình viên đưa ra, chẳng hạn như xác thực logic hoặc bất biến trong mã. Ví dụ, chúng ta có thể sử dụng `assert` để kiểm tra xem chỉ mục của một mảng có nằm trong giới hạn hợp lệ trong quá trình phát triển hay không. Sau đây là cú pháp của `assert`.
+- `ASSERT` là các câu lệnh được sử dụng để kiểm tra các giả định do lập trình viên đưa ra, chẳng hạn như xác thực logic hoặc bất biến trong mã. Ví dụ, chúng ta có thể sử dụng `assert` để kiểm tra xem chỉ mục của một mảng có nằm trong giới hạn hợp lệ trong quá trình phát triển hay không. Sau đây là cú pháp của `assert`:
+    `void assert(int expression);`
 
-`void assert(int expression);`
-### - **expression**: Đây có thể là một biến hoặc bất cứ biểu thức C nào. Nếu **expression** ước lượng là **TRUE**, thì `assert()` không làm điều gì. Nếu **expression** ước lượng là **false**, thì `assert()` hiển thị một thông báo lỗi trên ***stderr*** và ngừng thực thi chương trình.
-### - **Macro** này không trả về bất cứ giá trị nào.
+- **expression**: Đây có thể là một biến hoặc bất cứ biểu thức C nào. Nếu **expression** ước lượng là **TRUE**, thì `assert()` không làm điều gì. Nếu **expression** ước lượng là **false**, thì `assert()` hiển thị một thông báo lỗi trên ***stderr*** và ngừng thực thi chương trình.
+- **Macro** này không trả về bất cứ giá trị nào.
 
-### ***Ví dụ:*** Chương trình C sau minh họa cách sử dụng của assert() macro trong Thư viện C:
+***Ví dụ:*** Chương trình C sau minh họa cách sử dụng của assert() macro trong Thư viện C:
 
 ```c
 #include <assert.h> // include để dùng được macro assert
@@ -89,7 +89,7 @@ int main()
 }
 ```
 
-### 1. Trường hợp nhập một số nguyên có giá trị < 10, sẽ có thông báo lỗi sau:
+#### 1. Trường hợp nhập một số nguyên có giá trị < 10, sẽ có thông báo lỗi sau:
 
 ```
 Nhap mot gia tri nguyen: 
@@ -97,7 +97,7 @@ Nhap mot gia tri nguyen:
 Assertion failed: a >= 10, file 123.c, line 10
 ```
 
-### 2. Nếu nhập một số nguyên và chuỗi thỏa mãn điều kiện, sẽ cho kết quả:
+#### 2. Nếu nhập một số nguyên và chuỗi thỏa mãn điều kiện, sẽ cho kết quả:
 
 ```
 Nhap mot gia tri nguyen: 
@@ -110,7 +110,7 @@ Chuoi vua nhap la: 12345
 
  ## ***2. ASSERT với NDEBUG:***
 
- ### - Trong C/C++, chúng ta có thể loại bỏ hoàn toàn các `assert()` tại thời điểm biên dịch bằng cách sử dụng bộ tiền xử lý `NDEBUG`.
+ - Trong C/C++, chúng ta có thể loại bỏ hoàn toàn các `assert()` tại thời điểm biên dịch bằng cách sử dụng bộ tiền xử lý `NDEBUG`.
 
  ```c
  // Chương trình bên dưới chạy tốt vì NDEBUG được định nghĩa
