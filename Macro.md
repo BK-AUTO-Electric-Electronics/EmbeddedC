@@ -2,15 +2,15 @@
 
 ---
 
-### **Macro** hiểu đơn giản là tên do người viết chương trình đặt.
+**Macro** hiểu đơn giản là tên do người viết chương trình đặt.
 
 ### Các loại **macro**:
 
 ## **_1. OBJECT - LIKE MACRO:_** Macro hằng số
 
-### - Định nghĩa 1 hằng số, giá trị cố định
+- Định nghĩa 1 hằng số, giá trị cố định
 
-### - Khi đó quản lí code sẽ dễ hơn, khi cần sửa chỉ cần sửa trên dòng `#define`
+- Khi đó quản lí code sẽ dễ hơn, khi cần sửa chỉ cần sửa trên dòng `#define`
 
 ```c
 #define PI 3.141
@@ -18,19 +18,19 @@
 
 ## **_2. FUNCTION - LIKE MACRO:_** Macro dạng hàm
 
-### - Định nghĩa đoạn tạo mã giống như hàm nhưng không tạo overhead gọi hàm.
+- Định nghĩa đoạn tạo mã giống như hàm nhưng không tạo overhead gọi hàm.
 
 ```c
 #define SQUARE(x) ((x)*(x))
 ```
 
-### 2 dạng trên đều dùng bộ tiền xử lí: `#define`
+2 dạng trên đều dùng bộ tiền xử lí: `#define`
 
 ## **_3. CONDITIONAL COMPLILATION MACRO:_**
 
-### - Dùng để biên dịch có điều kiện, giúp code chạy trên nhiều vi điều khiển khác nhau.
+- Dùng để biên dịch có điều kiện, giúp code chạy trên nhiều vi điều khiển khác nhau.
 
-### - Bao gồm:
+- Bao gồm:
 
 | DIRECTIVE (CHỈ THỊ) | CHỨC NĂNG                                         |
 | ------------------- | ------------------------------------------------- |
@@ -50,9 +50,9 @@
 
 ## **_4. INCLUDE GUARD MACRO_**
 
-### - Ngăn việc `include` nhiều lần 1 file header.
+- Ngăn việc `include` nhiều lần 1 file header.
 
-### - Là cơ chế để nếu đã `include` 1 header file rồi thì những lần `include` sau sẽ không ảnh hưởng gì. Hay sử dụng 2 direct là `#ifndef`,`#define` và `#endif`.
+- Là cơ chế để nếu đã `include` 1 header file rồi thì những lần `include` sau sẽ không ảnh hưởng gì. Hay sử dụng 2 direct là `#ifndef`,`#define` và `#endif`.
 
 ```c
 #ifndef _MY_HEADER_H_ //Nếu macro _MY_HEADER_H_ chưa được định nghĩa
@@ -62,7 +62,7 @@
 
 ## **_5. Macro nhiều dòng:_**
 
-### - Để xuống dòng trong macro thì bạn sẽ dùng ký tự `\`. Như trong ví dụ sau đây chúng ta sẽ sửa lại đoạn code trên 1 chút để nó thành 1 macro có nhiều dòng nhằm cho thấy tác dụng của kí tự `\`
+- Để xuống dòng trong macro thì bạn sẽ dùng ký tự `\`. Như trong ví dụ sau đây chúng ta sẽ sửa lại đoạn code trên 1 chút để nó thành 1 macro có nhiều dòng nhằm cho thấy tác dụng của kí tự `\`
 
 ```c
 #define PRINT_SUM(a, b)        \
@@ -72,13 +72,13 @@
 \\ '\' là toán tử tiếp tục, để xuống dòng dùng toán tử '\' để nối các dòng lại với nhau nếu các dòng code quá dài.
 ```
 
-### Sử dụng:
+Sử dụng:
 
 ```c
 PRINT_SUM(3, 5);
 ```
 
-### Kết quả:
+Kết quả:
 
 ```c
 a = 3
@@ -88,13 +88,13 @@ a + b = 8
 
 ## **_6. VARIADIC MACRO:_**
 
-### - Có thể truyền lượng tham số không xác định như khi sử dụng `stdarg`.
+- Có thể truyền lượng tham số không xác định như khi sử dụng `stdarg`.
 
-### - Cú pháp: `#define MACRO_NAME(...)`
+- Cú pháp: `#define MACRO_NAME(...)`
 
-### - Dấu ‘…’ cho phép truyền nhiều tham số
+- Dấu ‘…’ cho phép truyền nhiều tham số
 
-### - `__VA_ARGS__` : dùng để là mã định danh thay thế để chèn các đối số bổ sung. `__VA_ARGS__` được thay thế bằng tất cả các đối số khớp với dấu ‘…’ bao gồm cả dấu phẩy. Khi không truyền thêm đối số sau dấu phẩy thì dùng cú pháp `##__VA_ARGS__` để loại bỏ dấu phẩy thừa và nối chuỗi.
+- `__VA_ARGS__` : dùng để là mã định danh thay thế để chèn các đối số bổ sung. `__VA_ARGS__` được thay thế bằng tất cả các đối số khớp với dấu ‘…’ bao gồm cả dấu phẩy. Khi không truyền thêm đối số sau dấu phẩy thì dùng cú pháp `##__VA_ARGS__` để loại bỏ dấu phẩy thừa và nối chuỗi.
 
 - VD:
 
@@ -127,13 +127,13 @@ a + b = 8
 
 ## **_7. X-MACROS:_**
 
-### **_X-Macros_** là một phương pháp sử dụng `#define` để tạo danh sách macro có thể mở rộng và tái sử dụng trong nhiều ngữ cảnh khác nhau. Ưu điểm của **_X-Macros_**:
+**_X-Macros_** là một phương pháp sử dụng `#define` để tạo danh sách macro có thể mở rộng và tái sử dụng trong nhiều ngữ cảnh khác nhau. Ưu điểm của **_X-Macros_**:
 
-- **Dễ bảo trì:** Chỉ cần sửa đổi **một danh sách duy nhất**, tất cả các phần còn lại sẽ tự động cập nhật.
+- Dễ bảo trì:** Chỉ cần sửa đổi **một danh sách duy nhất**, tất cả các phần còn lại sẽ tự động cập nhật.
 - **Hạn chế lỗi:** Tránh việc quên cập nhật các switch-case hoặc bảng ánh xạ.
 - **Tái sử dụng dễ dàng:** Có thể dùng cùng một danh sách cho nhiều mục đích khác nhau (enum, chuỗi, mảng, v.v.)
 
-### **_Định nghĩa các phần tử của danh sách:_**
+**_Định nghĩa các phần tử của danh sách:_**
 
 ```c
 #define VARIABLES \
@@ -144,7 +144,7 @@ a + b = 8
     X(valueN, N)
 ```
 
-### **_Mở rộng danh sách để tạo ra các đoạn khai báo hoặc câu lệnh:_**
+**_Mở rộng danh sách để tạo ra các đoạn khai báo hoặc câu lệnh:_**
 
 ```c
 #define X(name) int name;
@@ -152,7 +152,7 @@ a + b = 8
 #undef X
 ```
 
-### **_Ví dụ kinh điển: Enum + String table_**
+**_Ví dụ kinh điển: Enum + String table_**
 
 ```c
 // Định nghĩa danh sách lỗi bằng macro
@@ -183,7 +183,7 @@ int main()
 }
 ```
 
-### **_VD khác: Enum + giá trị + mô tả_**
+**_VD khác: Enum + giá trị + mô tả_**
 
 ```c
 #define ERROR_LIST \
@@ -217,3 +217,4 @@ int main() {
     printf("%d", a); // OUTPUT: -1
 }
 ```
+
