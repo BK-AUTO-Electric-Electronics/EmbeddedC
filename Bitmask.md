@@ -4,11 +4,11 @@
 ## ***1. ĐỊNH NGHĨA:***
 
 
-### **Bitmasking** là một kỹ thuật liên quan đến việc thao tác **bit**. Về cơ bản, nó giống như việc đặt một mặt nạ lên một số **bit** nhất định và ẩn đi những **bit** không hữu ích khác, nhằm giúp chương trình hiệu quả hơn nhiều và tối ưu hóa bộ nhớ.
+- **Bitmasking** là một kỹ thuật liên quan đến việc thao tác **bit**. Về cơ bản, nó giống như việc đặt một mặt nạ lên một số **bit** nhất định và ẩn đi những **bit** không hữu ích khác, nhằm giúp chương trình hiệu quả hơn nhiều và tối ưu hóa bộ nhớ.
 
-### **Bitmasking** là một chuỗi bit cũng có thể được gọi là tập bit hoặc trường bit và được sử dụng để thực hiện các phép toán bit trên dữ liệu đã cho.
+- **Bitmasking** là một chuỗi bit cũng có thể được gọi là tập bit hoặc trường bit và được sử dụng để thực hiện các phép toán bit trên dữ liệu đã cho.
 
-### Về cơ bản, có 6 toán tử bitwise trong C có thể được sử dụng để thao tác bit như sau:
+ Về cơ bản, có 6 toán tử bitwise trong C có thể được sử dụng để thao tác bit như sau:
 - `&` (Toán tử **AND bitwise**): trả về giá trị 1 nếu cả 2 bit đều là 1
 - `|` (Toán tử **OR bitwise**): trả về giá trị 1 nếu ít nhất 1 trong 2 bit là 1
 - `^` (Toán tử **XOR bitwise**): trả về giá trị 1 nếu 2 bit khác nhau
