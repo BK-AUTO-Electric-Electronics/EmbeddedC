@@ -1,6 +1,6 @@
-#ifndef ERROR_HANDLER_H
-#define ERROR_HANDLER_H
+#ifndef error_header_h
+#define error_header_h
 
-void test1(float b);
+void check_division(int dividor);
 
-#endif
+#endif 
