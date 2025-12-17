@@ -1,6 +1,6 @@
-#ifndef MATH_UTLS_H
-#define MATH_UTLS_H
+#ifndef math_utils_h
+#define math_untils_h
 
-float divide(int tu, int mau, ...);
+float divide(int count_1, int count_2,...);
 
 #endif
