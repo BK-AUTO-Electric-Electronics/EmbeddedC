@@ -5,7 +5,7 @@ typedef struct Module_manager Module;
 typedef void (*ModuleAction)(Module *);
  struct Module_manager{
     uint8_t ID;
-    char name[12];
+    char name[32];
     uint8_t status;
 
     ModuleAction on;
@@ -13,6 +13,9 @@ typedef void (*ModuleAction)(Module *);
     ModuleAction fault;
     ModuleAction check;
 };
+void add_module(uint8_t ID, const char *name);
+Module* get_module(uint8_t ID);
+void remove_module(uint8_t ID);
 
 
 #endif

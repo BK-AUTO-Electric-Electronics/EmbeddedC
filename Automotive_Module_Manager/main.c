@@ -3,11 +3,11 @@
 #include "function_handler.h"
 #include "error_handler.h"
 #include "module_manager.h"
-
 int main() {
     if(setjmp(error_jump)) {
         printf("Hệ thống gặp lỗi");
     }
+    else {
     add_module(1, "ENGINE");
     add_module(2, "ABS_BRAKE");
     Module *engine= get_module(1);
@@ -19,6 +19,5 @@ int main() {
 
     engine->off(engine);
     engine->check(engine);
-
-    
+}
 }
