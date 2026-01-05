@@ -1,4 +1,3 @@
-Ok! Mình có thể viết một **bản nháp cho file `project_design.md`** dựa trên những gì bạn đã gửi, đầy đủ các mục: mô tả project, phân tích thiết kế, cách dùng bitmask/function pointer/setjmp, và flowchart dạng văn bản (ASCII).
 
 ---
 
